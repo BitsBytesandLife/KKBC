@@ -1,0 +1,16 @@
+﻿@model Category
+
+<h2>Update Category</h2>
+
+@using (Html.BeginForm("UpdateCategoryToDatabase", "Products", "Post"))
+{
+    <input asp-for="CatID" type="hidden" value="@Model.CatID" />
+
+    <label asp-for="Name" class="control-label">Name</label>
+
+    <input type="text" name="Name" class="form-control" value="@Model.Name" />
+
+    <input type="submit" value="Update Category" class="btn btn-primary" />
+
+}
+

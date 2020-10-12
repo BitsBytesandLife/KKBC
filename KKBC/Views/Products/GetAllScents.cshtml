@@ -1,0 +1,22 @@
+﻿@model IEnumerable<ScentName>
+
+    <h2>Scents</h2>
+    <div style="display: block">
+        <a href="/Products/InsertScent/">Create a New Scent</a>
+    </div>
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+        @foreach (var scent in Model)
+        {
+            <tr>
+                <td><a href=/Products/ViewScent/@scent.ScentID>@scent.ScentID</a></td>
+                <td>@scent.Name</td>
+                <td>@scent.Description</td>
+            </tr>
+        }
+    </table>
+

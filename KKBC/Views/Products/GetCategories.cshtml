@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Category>;
+
+<h2>Product Categories</h2>
+
+<div style="display: block">
+    <a href="/Products/InsertCategory/">Create a New Category</a>
+</div>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+    </tr>
+    @foreach (var category in Model)
+    {
+    <tr>
+        <td><a href=/Products/ViewCategory/@category.CatID>@category.CatID</a></td>
+        <td>@category.Name</td>
+    </tr>
+    }
+</table>

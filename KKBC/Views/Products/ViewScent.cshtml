@@ -1,0 +1,28 @@
+﻿@model ScentName
+
+<h2>Scent Profile</h2>
+
+<table class="table">
+    <tr>
+        <th>Scent ID</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>@Model.ScentID</td>
+        <td>@Model.Name</td>
+        <td>@Model.Description</td>
+    </tr>
+</table>
+
+<div style="display: block">
+    <a href="/Products/UpdateScent/@Model.ScentID">Update this Scent</a>
+</div>
+
+<div style="display: block">
+    @using (Html.BeginForm("DeleteScent", "Products", "Post"))
+    {
+        <input type="hidden" asp-for="ScentID" value="@Model.ScentID" />
+        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this Scent" />
+    }
+</div>

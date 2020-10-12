@@ -1,0 +1,36 @@
+﻿@model Products
+<h2>Create a New Product</h2>
+@using (Html.BeginForm("InsertProductToDatabase", "Products", "Post"))
+{
+    <input asp-for="ProdID" type="hidden" value="" />
+    
+    
+    <div class="form-group">
+        <label for="">Select your scent:</label>
+        <select class="form-control" name="Name" value="">
+            @foreach (var scent in Model.ScentName)
+            {
+                <option value="@scent.Name">@scent.Name</option>
+            }
+        </select>
+
+        <label for="">Select your Category:</label>
+        <select class="form-control" name="CatID" value="">
+            @foreach (var cat in Model.Categories)
+            {
+                <option value="@cat.CatID">@cat.CatID @cat.Name</option>
+            }
+        </select>
+
+
+    </div>
+
+    <label asp-for="StockLevel" class="control-label">Stock Level</label>
+    <input type="text" name="StockLevel" class="form-control" value="" />
+
+    <label asp-for="Price" class="control-label">Price</label>
+    <input type="number" step="0.01" name="Price" class="form-control" />
+
+    <input type="submit" value="Create Product" class="btn btn-primary" />
+    }
+

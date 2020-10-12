@@ -34,7 +34,7 @@ namespace KKBC
             });
 
             services.AddTransient<ICustomersRepository, CustomersRepository>();
-
+            services.AddTransient<IProductRepository, ProductRepository>();
 
             services.AddControllersWithViews();
         }
