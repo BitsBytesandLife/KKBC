@@ -1,13 +1,15 @@
 ﻿@model ScentName
 
-<h2>Create a New Product</h2>
+<h2 class="header-color">Create a New Scent</h2>
 @using (Html.BeginForm("InsertScentToDatabase", "Products", "Post"))
 {
     <input asp-for="ScentID" type="hidden" value="" />
-    <label asp-for="Name" class="control-label">Name</label>
+    <label asp-for="Name" class="control-label" style="color:white;">Name</label>
     <input type="text" name="Name" class="form-control" value="" />
-    <label asp-for="Description" class="control-label">Description</label>
+    <br/>
+    <label asp-for="Description" class="control-label" style="color:white;">Description</label>
     <input type="text" name="Description" class="form-control" value="" />
-    <input type="submit" value="Create Product" class="btn btn-primary" />
+    <br />
+    <input type="submit" value="Create Product" class="btn btn-primary btn-info" />
 }
 

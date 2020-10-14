@@ -109,7 +109,7 @@ namespace KKBC.Controllers
         {
             repo.UpdateProduct(product);
 
-            return RedirectToAction("ViewProduct", new { id = product.ProdID });
+            return RedirectToAction("Index", new { id = product.ProdID });
         }
 
         public IActionResult UpdateSCentToDatabase(ScentName scent)

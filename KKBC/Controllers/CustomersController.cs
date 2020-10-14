@@ -37,7 +37,6 @@ namespace KKBC.Controllers
             return View(cust);
         }
 
-
         public IActionResult UpdateCustomer(int id)
         {
             var cust = repo.GetCustomer(id);
@@ -49,6 +48,7 @@ namespace KKBC.Controllers
 
             return View(cust);
         }
+
 
         public IActionResult UpdateCustomerToDatabase(Customers cust)
         {

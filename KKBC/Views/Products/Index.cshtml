@@ -1,15 +1,14 @@
 ﻿@model IEnumerable<Products>
-<h2>Products</h2>
+<h2 class="header-color">Products</h2>
 <div style="display: block">
-    <a href="/Products/InsertProduct/">Create a New Product</a>
+   <a class="kkbc-a" style="color: white;"  href="/Products/InsertProduct/">Create a New Product</a> 
 </div>
 
-<table class="table">
+<table class="table table-striped  table-light border">
     <tr>
         <th>ID</th>
         <th>Name</th>
         <th>CatID</th>
-        <th>ScentID</th>
         <th>Stock Level</th>
         <th>Price</th>
     </tr>
@@ -20,7 +19,6 @@
             <td><a href=/Products/ViewProduct/@product.ProdID>@product.ProdID</a></td>
             <td>@product.Name</td>
             <td>@product.CatID</td>
-            <td>@product.ScentID</td>
             <td>@product.StockLevel</td>
             <td>@product.Price</td>
         </tr>

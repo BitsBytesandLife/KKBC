@@ -13,6 +13,8 @@ namespace KKBC.Models
         public int ScentID { get; set; }
         public int StockLevel { get; set; }
         public double Price { get; set; }
+        public string CatName { get; set; }
+
         public IEnumerable<Category> Categories { get; set; }
         public IEnumerable<Scents> Scents { get; set; }
         public IEnumerable<ScentName> ScentName { get; set; }

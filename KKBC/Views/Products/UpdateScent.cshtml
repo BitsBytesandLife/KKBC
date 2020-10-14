@@ -1,19 +1,19 @@
 ﻿@model ScentName
 
-<h2>Update Scent</h2>
+<h2 class="header-color">Update Scent</h2>
 
 @using (Html.BeginForm("UpdateScentToDatabase", "Products", "Post"))
 {
     <input asp-for="ScentID" type="hidden" value="@Model.ScentID" />
 
-    <label asp-for="Name" class="control-label">Name</label>
+    <label asp-for="Name" class="control-label" style="color:white;">Name</label>
 
     <input type="text" name="Name" class="form-control" value="@Model.Name" />
-
-    <label asp-for="Description" class="control-label">Description</label>
+    <br />
+    <label asp-for="Description" class="control-label" style="color:white;">Description</label>
 
     <input type="text" name="Description" class="form-control" value="@Model.Description" />
-
-    <input type="submit" value="Update Product" class="btn btn-primary" />
+    <br />
+    <input type="submit" value="Update Product" class="btn btn-primary btn-info" />
 
 }

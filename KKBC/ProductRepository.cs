@@ -62,7 +62,9 @@ namespace KKBC
 
         public IEnumerable<Products> GetAllProducts()
         {  
-            return _conn.Query<Products>("SELECT * FROM products;");  
+            return _conn.Query<Products>("SELECT * FROM products; ");
+            //
+            //SELECT p.ProdID, p.Name, c.Name,p.StockLevel ,p.Price FROM products p INNER JOIN  category c WHERE c.CatID = p.CatID;
         }
 
         public IEnumerable<ScentName> GetAllScents()
