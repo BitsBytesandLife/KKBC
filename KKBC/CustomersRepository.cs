@@ -42,7 +42,7 @@ namespace KKBC.Models
 
         public void InsertCustomer(Customers customerToInsert)
         {
-            _conn.Execute("INSERT INTO customers (FirstName,LastName,Address,City,State,ZipCode) values(@firstName,@lastName,@address,@city,@state,zipCode);",
+            _conn.Execute("INSERT INTO customers (FirstName,LastName,Address,City,State,ZipCode) values(@firstName,@lastName,@address,@city,@state,@zipCode);",
                            new
                            {
                                firstName = customerToInsert.FirstName,

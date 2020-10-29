@@ -127,6 +127,16 @@ namespace KKBC
                             new { name = scent.Name,desc =scent.Description });
         }
 
+        public IEnumerable<Prod_With_CatName> ProductReport()
+        {
+            return _conn.Query<Prod_With_CatName>("prod_with_catname");
+        }
+
+        public IEnumerable<StockLevels> StockLevelsReport()
+        {
+            return _conn.Query<StockLevels>("stocklevel");
+        }
+
         public void UpdateCategory(Category cat)
         {
             _conn.Execute("UPDATE category SET Name = @name WHERE CatID = @id; ",

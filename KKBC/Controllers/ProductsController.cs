@@ -37,6 +37,20 @@ namespace KKBC.Controllers
             return View(scent);
         }
 
+        public IActionResult ProductReport()
+        {
+            var report = repo.ProductReport();
+
+            return View(report);
+        }
+
+        public IActionResult StockLevelsReport()
+        {
+            var report = repo.StockLevelsReport();
+
+            return View(report);
+        }
+
 
         public IActionResult GetCategories()
         {
@@ -109,21 +123,23 @@ namespace KKBC.Controllers
         {
             repo.UpdateProduct(product);
 
-            return RedirectToAction("Index", new { id = product.ProdID });
+            return RedirectToAction("Index"   );
+            // return RedirectToAction("Index", new { id = product.ProdID });
         }
 
         public IActionResult UpdateSCentToDatabase(ScentName scent)
         {
             repo.UpdateScent(scent);
-
-            return RedirectToAction("ViewScent", new { id  = scent.ScentID});
+            return RedirectToAction("GetAllScents");
+            //return RedirectToAction("ViewScent", new { id  = scent.ScentID});
         }
 
         public IActionResult UpdateCategoryToDatabase(Category category)
         {
             repo.UpdateCategory(category);
-
-            return RedirectToAction("ViewCategory", new {id =category.CatID });
+           
+            return RedirectToAction("GetCategories");
+            //return RedirectToAction("ViewCategory", new {id =category.CatID });
         }
 
 

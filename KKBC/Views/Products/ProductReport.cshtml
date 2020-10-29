@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Prod_With_CatName>;
+
+<h2 class="header-color">Product Report</h2>
+<table class="table table-striped table-light border">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Cat Name</th>
+        <th>Price</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ProdID</td>
+            <td>@item.Name.</td>
+            <td>@item.CategoryName.</td>
+            <td>@item.Price</td>
+        </tr>
+    }
+</table>

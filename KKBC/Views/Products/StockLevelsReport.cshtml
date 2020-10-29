@@ -1,0 +1,21 @@
+﻿@model IEnumerable<StockLevels>;
+
+
+<h2 class="header-color">Stock Leves Report</h2>
+<table class="table table-striped table-light border">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Stock Level</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ProdID</td>
+            <td>@item.Name.</td>
+            <td>@item.CategoryName.</td>
+            <td>@item.StockLevel</td>
+        </tr>
+    }
+</table>

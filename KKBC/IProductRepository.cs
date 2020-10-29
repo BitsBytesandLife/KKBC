@@ -12,6 +12,10 @@ namespace KKBC
     {
         public IEnumerable<Products> GetAllProducts();
 
+        public IEnumerable<Prod_With_CatName> ProductReport();
+
+        public IEnumerable<StockLevels> StockLevelsReport();
+
         public IEnumerable<ScentName> GetAllScents();
 
         public ScentName GetScent(int id);
